@@ -1,7 +1,11 @@
-name = "serverless-api"
+name = "mergeworker"
 type = "webpack"
-account_id = "dc56444c4c955a1653106ccf997c1067"
+account_id = "72b1ee01255dc5f679c7021fb5d0c93b"
 workers_dev = true
 route = ""
 zone_id = ""
 webpack_config = "webpack.config.js"
+
+kv_namespaces = [
+  { binding = "Vehicles", id = "c596f27b7c164137ab784fd04d1d9f9b" }
+]

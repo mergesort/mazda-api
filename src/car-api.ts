@@ -1,4 +1,4 @@
-import MyMazda from "node-mymazda";
+import MyMazda from "./vendor/node-mymazda/src/";
 
 declare const Vehicles: KVNamespace
 

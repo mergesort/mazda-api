@@ -1,4 +1,5 @@
 const path = require('path')
+const { node } = require('webpack')
 const webpack = require('webpack')
 
 const mode = process.env.NODE_ENV || 'production'

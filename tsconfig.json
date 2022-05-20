@@ -4,6 +4,8 @@
     "module": "commonjs",
     "target": "esnext",
     "lib": ["esnext", "webworker"],
+    "noImplicitAny": true,
+    "allowJs": true,
     "alwaysStrict": true,
     "strict": true,
     "preserveConstEnums": true,

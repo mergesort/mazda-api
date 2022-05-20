@@ -6,6 +6,9 @@ route = ""
 zone_id = ""
 webpack_config = "webpack.config.js"
 
+compatibility_date = "2022-05-19"
+
 kv_namespaces = [
   { binding = "Vehicles", id = "c596f27b7c164137ab784fd04d1d9f9b" }
 ]
+

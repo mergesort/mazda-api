@@ -1,11 +1,11 @@
 import MyMazda from "node-mymazda";
 
 declare const Vehicles: KVNamespace
+
+// Initialize API Client (MNAO = North America)
 let client = new MyMazda("XXXXX@fabisevi.ch", "XXXXXX", "MNAO");
 
 export async function authenticate(): Promise<void> {
-	// Initialize API Client (MNAO = North America)
-
 	// Get list of vehicles from the API (returns a list)
 	let vehicles = await client.getVehicles();
 	console.log(vehicles)
@@ -31,16 +31,6 @@ export async function authenticate(): Promise<void> {
 
 // test();
 
-async function vehicleId(): Promise<number> {
-	return Number(Vehicles.get("car-id"))
-}
-
-async function saveVehicleId(id: number) {
-	console.log(id)
-
-	Vehicles.put("car-id", id.toString())
-}
-
 // async function getCarStatus(id: number): Promise<VehicleStatus> {
 // 	await client.getVehicleStatus(id)
 // }
@@ -65,13 +55,23 @@ export async function stopEngine(): Promise<void> {
 	client.stopEngine(id)
 }
 
-async function turnOnAirConditioner(): Promise<void> {
+export async function turnOnAirConditioner(): Promise<void> {
 	let id = await vehicleId()
 	client.setHVACSetting(id, 70, "F", false, false)
 	client.turnOnHVAC(id)
 }
 
-async function turnOffAirConditioner(): Promise<void> {
+export async function turnOffAirConditioner(): Promise<void> {
 	let id = await vehicleId()
 	client.turnOffHVAC(id)
+}
+
+const vehicleId = async () => {
+	return Number(Vehicles.get("car-id"))
+}
+
+async function saveVehicleId(id: number) {
+	console.log(id)
+
+	Vehicles.put("car-id", id.toString())
 }

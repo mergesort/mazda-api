@@ -1,9 +1,15 @@
-name = "worker-typescript-template"
+name = "mergeworker"
 type = "javascript"
 zone_id = ""
-account_id = ""
+account_id = "72b1ee01255dc5f679c7021fb5d0c93b"
 route = ""
 workers_dev = true
+
+compatibility_date = "2022-05-19"
+
+kv_namespaces = [
+  { binding = "Vehicles", id = "c596f27b7c164137ab784fd04d1d9f9b" }
+]
 
 [build]
 command = "npm install && npm run build"

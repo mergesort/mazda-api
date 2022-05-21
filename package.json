@@ -18,6 +18,11 @@
       "prettier"
     ]
   },
+  "dependencies": {
+    "itty-router": "^1.3.0",
+    "node-mymazda": "^1.1.2",
+    "zlib": "^1.0.5"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.0.0",
     "@types/jest": "^26.0.23",
